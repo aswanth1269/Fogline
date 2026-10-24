@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+models/
+data/*.sqlite3
+.venv-1/
+venv/
+data/TON_IoT_Train_Test_Network.csv
+figs/

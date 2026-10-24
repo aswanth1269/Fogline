@@ -1,0 +1,195 @@
+{
+ "events": 32674,
+ "incident_events": 6674,
+ "incidents": 480,
+ "vector_counts": {
+  "network": 15736,
+  "identity": 9469,
+  "endpoint": 6204,
+  "alert": 1265
+ },
+ "stage_counts": {
+  "benign": 26000,
+  "lateral_movement": 1360,
+  "credential_access": 1350,
+  "reconnaissance": 1129,
+  "execution": 1112,
+  "exfiltration": 866,
+  "impact": 857
+ },
+ "nodes": 253,
+ "train_incidents": 336,
+ "test_incidents": 144,
+ "split_time": "2025-02-10 02:20:24.294367790+00:00",
+ "train_incidents_after_purge": 335,
+ "points": {
+  "train": 3760,
+  "test": 1457
+ },
+ "feature_build_s": 1.1056201457977295,
+ "ablation_no_graph_context_at_test": {
+  "accuracy": 0.7295813315030886,
+  "macro_f1": 0.726993871920924
+ },
+ "stage_results": {
+  "Majority class": {
+   "accuracy": 0.23747426218256693,
+   "macro_f1": 0.06396746163801072
+  },
+  "Random Forest (window)": {
+   "accuracy": 0.730267673301304,
+   "macro_f1": 0.7300353041675037
+  },
+  "XGBoost (window)": {
+   "accuracy": 0.7179135209334249,
+   "macro_f1": 0.7095126721458812
+  },
+  "Static graph + XGBoost": {
+   "accuracy": 0.7137954701441318,
+   "macro_f1": 0.71017206308594
+  },
+  "LSTM (sequence)": {
+   "accuracy": 0.7508579272477693,
+   "macro_f1": 0.7525863474805906
+  },
+  "Temporal graph (TG-AMV, ours)": {
+   "accuracy": 0.7542896362388469,
+   "macro_f1": 0.7443714029653883
+  }
+ },
+ "vector_weights_by_current_stage": {
+  "reconnaissance": {
+   "network": 0.32600000500679016,
+   "identity": 0.36899998784065247,
+   "endpoint": 0.20499999821186066,
+   "alert": 0.10000000149011612
+  },
+  "credential_access": {
+   "network": 0.1720000058412552,
+   "identity": 0.5099999904632568,
+   "endpoint": 0.020999999716877937,
+   "alert": 0.29600000381469727
+  },
+  "execution": {
+   "network": 0.30300000309944153,
+   "identity": 0.5649999976158142,
+   "endpoint": 0.0689999982714653,
+   "alert": 0.06300000101327896
+  },
+  "lateral_movement": {
+   "network": 0.4909999966621399,
+   "identity": 0.2930000126361847,
+   "endpoint": 0.1289999932050705,
+   "alert": 0.08799999952316284
+  },
+  "exfiltration": {
+   "network": 0.7670000195503235,
+   "identity": 0.0560000017285347,
+   "endpoint": 0.08799999952316284,
+   "alert": 0.09000000357627869
+  },
+  "impact": {
+   "network": 0.5149999856948853,
+   "identity": 0.12800000607967377,
+   "endpoint": 0.20000000298023224,
+   "alert": 0.15700000524520874
+  }
+ },
+ "tg_per_class_f1": {
+  "reconnaissance": 0.635,
+  "credential_access": 0.727,
+  "execution": 0.717,
+  "lateral_movement": 0.714,
+  "exfiltration": 0.863,
+  "impact": 0.81
+ },
+ "rf_per_class_f1": {
+  "reconnaissance": 0.633,
+  "credential_access": 0.687,
+  "execution": 0.68,
+  "lateral_movement": 0.691,
+  "exfiltration": 0.838,
+  "impact": 0.852
+ },
+ "early_warning": {
+  "Random Forest (window)": {
+   "incidents": 144,
+   "warned": 0,
+   "rate": 0.0,
+   "median_lead_min": 0
+  },
+  "LSTM (sequence)": {
+   "incidents": 144,
+   "warned": 57,
+   "rate": 0.3958333333333333,
+   "median_lead_min": 20.342487665017448
+  },
+  "Temporal graph (TG-AMV, ours)": {
+   "incidents": 144,
+   "warned": 57,
+   "rate": 0.3958333333333333,
+   "median_lead_min": 25.622396111488342
+  }
+ },
+ "victim_moves": {
+  "train": 361,
+  "test": 148
+ },
+ "victim_results": {
+  "Random guess": {
+   "hits1": 0.02702702702702703,
+   "hits3": 0.08783783783783784,
+   "mrr": 0.10705700233235724,
+   "n": 148,
+   "lateral": {
+    "hits1": 0.0196078431372549,
+    "hits3": 0.06862745098039216,
+    "mrr": 0.09565029195364481,
+    "n": 102
+   }
+  },
+  "Most attacked host (popularity)": {
+   "hits1": 0.20945945945945946,
+   "hits3": 0.41216216216216217,
+   "mrr": 0.34791755226311777,
+   "n": 148,
+   "lateral": {
+    "hits1": 0.06862745098039216,
+    "hits3": 0.14705882352941177,
+    "mrr": 0.1616842915190336,
+    "n": 102
+   }
+  },
+  "Static graph": {
+   "hits1": 0.20270270270270271,
+   "hits3": 0.4189189189189189,
+   "mrr": 0.3535782518986601,
+   "n": 148,
+   "lateral": {
+    "hits1": 0.058823529411764705,
+    "hits3": 0.1568627450980392,
+    "mrr": 0.16989785569609503,
+    "n": 102
+   }
+  },
+  "Temporal graph (ours)": {
+   "hits1": 0.18243243243243243,
+   "hits3": 0.41216216216216217,
+   "mrr": 0.3574133048745854,
+   "n": 148,
+   "lateral": {
+    "hits1": 0.08823529411764706,
+    "hits3": 0.19607843137254902,
+    "mrr": 0.22693303060233952,
+    "n": 102
+   }
+  }
+ },
+ "victim_temporal_coef": [
+  0.284,
+  0.17,
+  -0.04,
+  0.364,
+  0.118
+ ]
+}

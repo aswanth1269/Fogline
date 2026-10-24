@@ -1,0 +1,66 @@
+{
+  "source": "Synthetic; no real traffic captured",
+  "generator": "Mulberry32, Box-Muller normal draws; illustrative centers inherited from project generator",
+  "datasets": [
+    {
+      "file": "synthetic_sequence_baseline.csv",
+      "rows": 2280,
+      "episodes": 240,
+      "seed": 90311,
+      "purpose": "Baseline sequence training with fixed stage dwell lengths.",
+      "classes": {
+        "benign": 600,
+        "reconnaissance": 480,
+        "credential_access": 480,
+        "lateral_movement": 240,
+        "exfiltration": 240,
+        "denial_of_service": 240
+      },
+      "sha256": "a4dfcf5f7ccddc7f9392d6d39cac7b03987f32b636d65e14fc35b9d1b52b5a4b"
+    },
+    {
+      "file": "synthetic_sequence_variable.csv",
+      "rows": 4534,
+      "episodes": 360,
+      "seed": 90312,
+      "purpose": "Sequence training with variable dwell lengths, timing and more feature overlap.",
+      "classes": {
+        "benign": 1128,
+        "reconnaissance": 1007,
+        "credential_access": 1000,
+        "lateral_movement": 463,
+        "exfiltration": 461,
+        "denial_of_service": 475
+      },
+      "sha256": "ae99b59d129af34a39ab47e5e4731ee8ebfbe95f7e4d76485c3927d9264ec5c8"
+    },
+    {
+      "file": "synthetic_sequence_evaluation.csv",
+      "rows": 1466,
+      "episodes": 120,
+      "seed": 90313,
+      "purpose": "Reserved later evaluation; do not upload to training.",
+      "classes": {
+        "benign": 374,
+        "reconnaissance": 324,
+        "credential_access": 321,
+        "lateral_movement": 146,
+        "exfiltration": 148,
+        "denial_of_service": 153
+      },
+      "sha256": "e305bc0dfac92276d5feed54e46868106ef527aa2e482e665611a52be0e056bf"
+    },
+    {
+      "file": "synthetic_binary_balanced.csv",
+      "rows": 6000,
+      "episodes": null,
+      "seed": 90314,
+      "purpose": "Balanced binary IDS training; 3000 normal and 3000 generated attack examples.",
+      "classes": {
+        "0": 3000,
+        "1": 3000
+      },
+      "sha256": "52169ef635ff7ab0f241485d9d577a7103f217065ac5c69249707d3ad0d3247c"
+    }
+  ]
+}

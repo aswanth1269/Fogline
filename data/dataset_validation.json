@@ -1,0 +1,34 @@
+[
+  {
+    "file": "synthetic_sequence_baseline.csv",
+    "rows": 2280,
+    "episodes": 240,
+    "valid_windows": 1560
+  },
+  {
+    "file": "synthetic_sequence_variable.csv",
+    "rows": 4534,
+    "episodes": 360,
+    "valid_windows": 3454
+  },
+  {
+    "file": "synthetic_sequence_evaluation.csv",
+    "rows": 1466,
+    "episodes": 120,
+    "valid_windows": 1106
+  },
+  {
+    "training_accepted": "synthetic_sequence_baseline.csv",
+    "train_windows": 1170,
+    "holdout_windows": 390
+  },
+  {
+    "training_accepted": "synthetic_sequence_variable.csv",
+    "train_windows": 2580,
+    "holdout_windows": 874
+  },
+  {
+    "training_accepted": "synthetic_binary_balanced.csv",
+    "rows": 6000
+  }
+]

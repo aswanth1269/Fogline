@@ -1,0 +1,6 @@
+# Extra packages needed only for the report experiments (not for the web app)
+matplotlib
+seaborn
+networkx
+xgboost
+torch
